@@ -3,7 +3,7 @@
   
   Open a terminal on your new computer and run:
   
-   git clone <your-repo-url> CYD-AGYDeck-Pro
+   git clone <https://github.com/ssdjmjro/CYD-AGY_DECK_PRO/blob/main/CYD_AGYDeck_Pro_v7.0.zip> CYD-AGYDeck-Pro
    cd CYD-AGYDeck-Pro
   
   ──────
