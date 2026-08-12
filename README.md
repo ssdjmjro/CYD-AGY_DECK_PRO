@@ -1,34 +1,29 @@
-#### Step 1: Unzip the Package
+ ### 1 Step 1: Download Your Repo / ZIP
   
-  Copy CYD_AGYDeck_Pro_v7.0.zip to your laptop and extract it:
+  On your new computer, open a terminal and clone your GitHub repository:
   
-  unzip CYD_AGYDeck_Pro_v7.0.zip
+  git clone https://github.com/ssdjmjro/CYD-AGYDeck-Pro.git
   cd CYD-AGYDeck-Pro
   
-  ──────
-  #### Step 2: Flash Your CYD Board (1 Command)
-  
-  Plug your new CYD board into USB and run:
-  
-  ./scripts/flash.sh
-  
-  • What it does: Auto-detects your USB serial port (/dev/ttyUSB* / /dev/ttyACM*), fixes permissions, installs     
-  esptool, and flashes the firmware to your board in ~10 seconds!
+  (Or transfer and unzip your CYD_AGYDeck_Pro_v7.0.zip file, then cd CYD-AGYDeck-Pro)
 
   ──────
-  #### Step 3: Start the PC Companion App (1 Command)
+  ### 2 Step 2: Flash Your CYD Board (1 Command)
   
-  Run the companion script in your terminal:
+  Plug your CYD board into USB and run the auto-flashing script:
+  
+  ./scripts/flash.sh
+
+  • What it does: Auto-detects your USB port, fixes permissions, installs esptool, and flashes the firmware to your
+  board in ~10 seconds!
+  
+  ──────
+  ### 3 Step 3: Run the PC Companion App (1 Command)
+  
+  In your terminal, run the companion script:
   
   ./scripts/run_companion.sh
   
-  • What it does: Connects to your CYD board, streams live CPU/RAM/Network stats, and listens for touch actions on 
-  your screen (TabForge Studio, AGY AI Agent, Terminal, Google, Music controls)!
-
-  ──────
-  ### 💡 MicroSD Card Option (No Cable Required)
-  
-  If you want to load it via MicroSD card on an ESP32 Firmware Launcher:
-  
-  • Copy the file CYD-AGYDeck-Pro/bin/CYD_StreamDeck_SD.bin to a FAT32 MicroSD card.
-  • Insert into your CYD board -> Boot up -> Select CYD_StreamDeck_SD.bin -> Tap Install.
+  • What it does: Auto-installs Python dependencies (pyserial, psutil), connects to your CYD board over USB, feeds 
+  live PC CPU/RAM/Network stats, and enables touch control for TabForge Studio, AGY AI, Terminal, Google, Files,   
+  and Music!
