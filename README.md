@@ -1,8 +1,10 @@
   Here are the exact 3 simple steps to activate CYD AGYDeck Pro when you unbox a brand-new CYD board:              
+  
   ──────
   ### 1. Plug In Your New CYD Board
   
   Connect your new CYD board to your computer using a USB cable.
+  
   ──────
   ### 2. Flash the Board (One Command)
   
@@ -15,6 +17,7 @@
   Pro.git)
   
   Your new CYD screen will immediately light up with the CYD AGYDeck Pro v6.0 Cyberpunk UI! 📺
+  
   ──────
   ### 3. Run the PC Companion Daemon
   
@@ -23,7 +26,8 @@
   
    cd /home/ssdjmjro/CYD-AGYDeck-Pro
     ./scripts/run_companion.sh
-    ──────
+   
+  ──────
   ### 💡 Alternative: MicroSD Card Method (No Terminal Needed)
   
   If your new CYD board has ESP32 Firmware Launcher:
