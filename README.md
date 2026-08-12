@@ -1,29 +1,33 @@
- ### 1 Step 1: Download Your Repo / ZIP
+ 
+  #### Step 1: Get the Project on Your New Computer
   
-  On your new computer, open a terminal and clone your GitHub repository:
+  Open a terminal on your new computer and run:
   
-  git clone https://github.com/ssdjmjro/CYD-AGYDeck-Pro.git
-  cd CYD-AGYDeck-Pro
-  
-  (Or transfer and unzip your CYD_AGYDeck_Pro_v7.0.zip file, then cd CYD-AGYDeck-Pro)
-
-  ──────
-  ### 2 Step 2: Flash Your CYD Board (1 Command)
-  
-  Plug your CYD board into USB and run the auto-flashing script:
-  
-  ./scripts/flash.sh
-
-  • What it does: Auto-detects your USB port, fixes permissions, installs esptool, and flashes the firmware to your
-  board in ~10 seconds!
+   git clone <your-repo-url> CYD-AGYDeck-Pro
+   cd CYD-AGYDeck-Pro
   
   ──────
-  ### 3 Step 3: Run the PC Companion App (1 Command)
+  #### Step 2: Flash the Firmware to Your New CYD Board
   
-  In your terminal, run the companion script:
+  1. Connect your new CYD board to your computer using a USB cable.
+  2. Run the one-click flashing script:
+    chmod +x scripts/flash.sh
+    ./scripts/flash.sh
+  (Alternative without flashing script: Copy CYD_StreamDeck_SD.bin to a MicroSD card and launch it via ESP32       
+  Launcher on the board).
   
-  ./scripts/run_companion.sh
+  ──────
+  #### Step 3: Enable Auto-Connect on the New Computer
   
-  • What it does: Auto-installs Python dependencies (pyserial, psutil), connects to your CYD board over USB, feeds 
-  live PC CPU/RAM/Network stats, and enables touch control for TabForge Studio, AGY AI, Terminal, Google, Files,   
-  and Music!
+  Run the auto-connect service installer script:
+  
+   chmod +x scripts/setup_autoconnect.sh
+   ./scripts/setup_autoconnect.sh
+   
+   ──────
+  ### 🎉 You're All Set!
+  
+  • The companion service is now running in the background on your new PC.
+  • From now on, whenever you plug the CYD board into USB, it will automatically connect and start streaming your  
+  PC telemetry and launcher controls!
+
