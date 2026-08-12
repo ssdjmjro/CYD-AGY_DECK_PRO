@@ -1,37 +1,34 @@
-  Here are the exact 3 simple steps to activate CYD AGYDeck Pro when you unbox a brand-new CYD board:              
+#### Step 1: Unzip the Package
+  
+  Copy CYD_AGYDeck_Pro_v7.0.zip to your laptop and extract it:
+  
+  unzip CYD_AGYDeck_Pro_v7.0.zip
+  cd CYD-AGYDeck-Pro
   
   ──────
-  ### 1. Plug In Your New CYD Board
+  #### Step 2: Flash Your CYD Board (1 Command)
   
-  Connect your new CYD board to your computer using a USB cable.
+  Plug your new CYD board into USB and run:
   
+  ./scripts/flash.sh
+  
+  • What it does: Auto-detects your USB serial port (/dev/ttyUSB* / /dev/ttyACM*), fixes permissions, installs     
+  esptool, and flashes the firmware to your board in ~10 seconds!
+
   ──────
-  ### 2. Flash the Board (One Command)
+  #### Step 3: Start the PC Companion App (1 Command)
   
-  Open a terminal and run the one-click flashing script from your repository:
+  Run the companion script in your terminal:
   
-   cd /home/ssdjmjro/CYD-AGYDeck-Pro
-    ./scripts/flash.sh
+  ./scripts/run_companion.sh
   
-  (If you are on a new computer, just clone your repo first with git clone https://github.com/ssdjmjro/CYD-AGYDeck-
-  Pro.git)
-  
-  Your new CYD screen will immediately light up with the CYD AGYDeck Pro v6.0 Cyberpunk UI! 📺
-  
+  • What it does: Connects to your CYD board, streams live CPU/RAM/Network stats, and listens for touch actions on 
+  your screen (TabForge Studio, AGY AI Agent, Terminal, Google, Music controls)!
+
   ──────
-  ### 3. Run the PC Companion Daemon
+  ### 💡 MicroSD Card Option (No Cable Required)
   
-  In your terminal, start the companion script so your PC feeds live stats to CYD and responds to touch buttons    
-  (TabForge Studio, AGY AI Agent, Terminal, Music Control):
+  If you want to load it via MicroSD card on an ESP32 Firmware Launcher:
   
-   cd /home/ssdjmjro/CYD-AGYDeck-Pro
-    ./scripts/run_companion.sh
-   
-  ──────
-  ### 💡 Alternative: MicroSD Card Method (No Terminal Needed)
-  
-  If your new CYD board has ESP32 Firmware Launcher:
-  
-  1. Copy CYD_StreamDeck_SD.bin to a FAT32 MicroSD card.
-  2. Insert the card into your new CYD.
-  3. Turn on the board -> Select CYD_StreamDeck_SD.bin -> Tap Install/Run.
+  • Copy the file CYD-AGYDeck-Pro/bin/CYD_StreamDeck_SD.bin to a FAT32 MicroSD card.
+  • Insert into your CYD board -> Boot up -> Select CYD_StreamDeck_SD.bin -> Tap Install.
